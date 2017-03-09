@@ -110,6 +110,8 @@ def main(args):
         print >> sys.stderr, "ERROR!"
         print >> sys.stderr, "Failed to check cgroups setup for BenchExec."
         print >> sys.stderr, "Visit https://github.com/sosy-lab/benchexec/blob/master/doc/INSTALL.md for detailed instructions."
+        print >> sys.stderr, "A script following those instructions is available in 'setup_scripts/activate_benchexec_systemd.sh'"
+        print >> sys.stderr, "In any case, manual intervention is most likely required to disable swap"
         raise e
     print "BenchExec setup done correctly."
     print "Ready to run benchmarks."
