@@ -116,6 +116,13 @@ def main(args):
     print "BenchExec setup done correctly."
     print "Ready to run benchmarks."
 
+    raw_input("Press ENTER to run benchmarks with 30s time limit.")
+    subprocess.call(
+        './scripts/benchmark.py -o ../../temp_benchexec_files/ ../../cpa-seq.xml'.split(),
+        cwd=get_external_dir_path(expected_cpachecker_dir)
+    )
+
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument(
