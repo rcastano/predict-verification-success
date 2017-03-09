@@ -116,7 +116,10 @@ def main(args):
     print "BenchExec setup done correctly."
     print "Ready to run benchmarks."
 
-    raw_input("Press ENTER to run benchmarks with 30s time limit.")
+    if not args.run_benchmarks:
+        raw_input("Press ENTER to run benchmarks with 30s time limit.")
+
+    print "Running benchmarks"
     subprocess.call(
         './scripts/benchmark.py -o ../../temp_benchexec_files/ ../../cpa-seq.xml'.split(),
         cwd=get_external_dir_path(expected_cpachecker_dir)
@@ -127,6 +130,12 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument(
         "--setup_repos",
+        default=False,
+        action="store_true",
+        help="Option to set up repositories for CPAchecker and SV-COMP instances if they are not present")
+
+    parser.add_argument(
+        "--run_benchmarks",
         default=False,
         action="store_true",
         help="Option to set up repositories for CPAchecker and SV-COMP instances if they are not present")
