@@ -1,3 +1,4 @@
+import argparse
 import os.path
 import subprocess
 import sys
@@ -11,13 +12,13 @@ def check_git_remote(dir, expected_url):
     output = subprocess.check_output(
         'git remote get-url origin'.split(),
         cwd=dir)
-    return url in output
+    return expected_url in output
     
 def check_git_commit(dir, expected_commit):
     output = subprocess.check_output(
         'git rev-parse HEAD'.split(),
         cwd=dir)
-    return commit in output
+    return expected_commit in output
 
 external_dirs = 'external'
 def check_repo_status(expected_dir, expected_url, expected_commit):
@@ -27,7 +28,7 @@ def check_repo_status(expected_dir, expected_url, expected_commit):
     check_git_commit(expected_dir, expected_commit)
 
 def get_external_dir_path(dir):
-    return os.path.join(_script_path(), '/../', external_dirs, dir)
+    return os.path.join(_script_path(), external_dirs, dir)
 
 
 def setup_repo(dir, url, commit):
@@ -81,5 +82,12 @@ def main(args):
         expected_dir=expected_svcomp_dir,
         expected_url=expected_svcomp_url,
         expected_commit=expected_svcomp_commit)
+    print "Repos correct."
 
-    
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--setup_repos",
+        help="Option to set up repositories for CPAchecker and SV-COMP instances if they are not present")
+    args = parser.parse_args()
+    main(args)
