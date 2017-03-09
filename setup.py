@@ -138,6 +138,6 @@ if __name__ == "__main__":
         "--run_benchmarks",
         default=False,
         action="store_true",
-        help="Option to set up repositories for CPAchecker and SV-COMP instances if they are not present")
+        help="Run benchmarks without asking for user input.")
     args = parser.parse_args()
     main(args)
