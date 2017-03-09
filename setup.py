@@ -40,8 +40,7 @@ def setup_repo(dir, url, commit):
         raise Exception('Directory for repository already exists.')
     try:
         subprocess.check_call(
-            command,
-            cwd=dir)
+            command)
     except Exception as e:
         print >> sys.stderr, 'Failed to clone repository'
         raise e
@@ -119,6 +118,8 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument(
         "--setup_repos",
+        default=False,
+        action="store_true",
         help="Option to set up repositories for CPAchecker and SV-COMP instances if they are not present")
     args = parser.parse_args()
     main(args)
