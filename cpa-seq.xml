@@ -39,61 +39,61 @@
   </rundefinition>
 
   <tasks name="ArraysReach">
-    <includesfile>../sv-benchmarks/c/ArraysReach.set</includesfile>
+    <includesfile>external/sv-benchmarks/c/ArraysReach.set</includesfile>
   </tasks>
   <tasks name="ArraysMemSafety">
-    <includesfile>../sv-benchmarks/c/ArraysMemSafety.set</includesfile>
+    <includesfile>external/sv-benchmarks/c/ArraysMemSafety.set</includesfile>
   </tasks>
   <tasks name="BitVectorsReach">
-    <includesfile>../sv-benchmarks/c/BitVectorsReach.set</includesfile>
+    <includesfile>external/sv-benchmarks/c/BitVectorsReach.set</includesfile>
   </tasks>
   <tasks name="BitVectorsOverflows">
-    <includesfile>../sv-benchmarks/c/BitVectorsOverflows.set</includesfile>
+    <includesfile>external/sv-benchmarks/c/BitVectorsOverflows.set</includesfile>
     <option name="-64"/>
   </tasks>
   <tasks name="HeapReach">
-    <includesfile>../sv-benchmarks/c/HeapReach.set</includesfile>
+    <includesfile>external/sv-benchmarks/c/HeapReach.set</includesfile>
   </tasks>
   <tasks name="HeapMemSafety">
-    <includesfile>../sv-benchmarks/c/HeapMemSafety.set</includesfile>
+    <includesfile>external/sv-benchmarks/c/HeapMemSafety.set</includesfile>
   </tasks>
   <tasks name="Floats">
-    <includesfile>../sv-benchmarks/c/Floats.set</includesfile>
+    <includesfile>external/sv-benchmarks/c/Floats.set</includesfile>
   </tasks>
   <tasks name="ControlFlow">
-    <includesfile>../sv-benchmarks/c/ControlFlow.set</includesfile>
+    <includesfile>external/sv-benchmarks/c/ControlFlow.set</includesfile>
   </tasks>
   <tasks name="Simple">
-    <includesfile>../sv-benchmarks/c/Simple.set</includesfile>
+    <includesfile>external/sv-benchmarks/c/Simple.set</includesfile>
   </tasks>
   <tasks name="ECA">
-    <includesfile>../sv-benchmarks/c/ECA.set</includesfile>
+    <includesfile>external/sv-benchmarks/c/ECA.set</includesfile>
   </tasks>
   <tasks name="Loops">
-    <includesfile>../sv-benchmarks/c/Loops.set</includesfile>
+    <includesfile>external/sv-benchmarks/c/Loops.set</includesfile>
   </tasks>
   <tasks name="Recursive">
-    <includesfile>../sv-benchmarks/c/Recursive.set</includesfile>
+    <includesfile>external/sv-benchmarks/c/Recursive.set</includesfile>
   </tasks>
   <tasks name="ProductLines">
-    <includesfile>../sv-benchmarks/c/ProductLines.set</includesfile>
+    <includesfile>external/sv-benchmarks/c/ProductLines.set</includesfile>
   </tasks>
   <tasks name="Sequentialized">
-    <includesfile>../sv-benchmarks/c/Sequentialized.set</includesfile>
+    <includesfile>external/sv-benchmarks/c/Sequentialized.set</includesfile>
   </tasks>
   <tasks name="Termination">
-    <includesfile>../sv-benchmarks/c/Termination.set</includesfile>
+    <includesfile>external/sv-benchmarks/c/Termination.set</includesfile>
     <option name="-64"/>
   </tasks>
   <tasks name="Concurrency">
-    <includesfile>../sv-benchmarks/c/Concurrency.set</includesfile>
+    <includesfile>external/sv-benchmarks/c/Concurrency.set</includesfile>
   </tasks>
   <tasks name="DeviceDriversLinux64">
-    <includesfile>../sv-benchmarks/c/DeviceDriversLinux64.set</includesfile>
+    <includesfile>external/sv-benchmarks/c/DeviceDriversLinux64.set</includesfile>
     <option name="-64"/>
   </tasks>
   <tasks name="BusyBox">
-    <includesfile>../sv-benchmarks/c/BusyBox.set</includesfile>
+    <includesfile>external/sv-benchmarks/c/BusyBox.set</includesfile>
     <option name="-64"/>
   </tasks>
 
