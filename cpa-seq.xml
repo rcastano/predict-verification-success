@@ -10,12 +10,18 @@
 
   <resultfiles>**.graphml</resultfiles>
   
-  <rundefinition name="sv-comp16"></rundefinition>
+  <rundefinition name="sv-comp16-predicateAnalysis">
+      <option name="-predicateAnalysis"/>
+      <option name="-disable-java-assertions"/>
+      <option name="-heap">10000m</option>
+      <option name="-setprop">cpa.arg.errorPath.graphml=error-witness.graphml</option>
+      <option name="-outputpath">benchexec-outputs/${inputfile_name}/${rundefinition_name}/${benchmark_date}/</option>
 
-  <option name="-sv-comp16"/>
-  <option name="-disable-java-assertions"/>
-  <option name="-heap">10000m</option>
-  <option name="-setprop">cpa.arg.errorPath.graphml=error-witness.graphml</option>
+      <option name="-setprop">analysis.collectAssumptions=true</option>
+      <option name="-setprop">counterexample.continueAfterInfeasibleError=false</option>
+      <option name="-setprop">CompositeCPA.cpas=cpa.location.LocationCPA,cpa.callstack.CallstackCPA,cpa.functionpointer.FunctionPointerCPA,cpa.predicate.PredicateCPA,cpa.assumptions.storage.AssumptionStorageCPA</option>
+      <option name="-setprop"></option>
+  </rundefinition>
 
   <tasks name="ArraysReach">
     <includesfile>../sv-benchmarks/c/ArraysReach.set</includesfile>
