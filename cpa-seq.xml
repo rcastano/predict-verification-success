@@ -15,7 +15,7 @@
       <option name="-disable-java-assertions"/>
       <option name="-heap">10000m</option>
       <option name="-setprop">cpa.arg.errorPath.graphml=error-witness.graphml</option>
-      <option name="-outputpath">benchexec-outputs/${inputfile_name}/${rundefinition_name}/${benchmark_date}/</option>
+      <option name="-outputpath">../../benchexec-outputs/${inputfile_name}/${rundefinition_name}/${benchmark_date}/</option>
 
       <option name="-skipRecursion"/>
       <option name="-setprop">limits.time.cpu=30s</option>
@@ -29,7 +29,7 @@
       <option name="-disable-java-assertions"/>
       <option name="-heap">10000m</option>
       <option name="-setprop">cpa.arg.errorPath.graphml=error-witness.graphml</option>
-      <option name="-outputpath">benchexec-outputs/${inputfile_name}/${rundefinition_name}/${benchmark_date}/</option>
+      <option name="-outputpath">../../benchexec-outputs/${inputfile_name}/${rundefinition_name}/${benchmark_date}/</option>
 
       <option name="-skipRecursion"/>
       <option name="-setprop">limits.time.cpu=30s</option>
@@ -43,7 +43,7 @@
       <option name="-disable-java-assertions"/>
       <option name="-heap">10000m</option>
       <option name="-setprop">cpa.arg.errorPath.graphml=error-witness.graphml</option>
-      <option name="-outputpath">benchexec-outputs/${inputfile_name}/${rundefinition_name}/${benchmark_date}/</option>
+      <option name="-outputpath">../../benchexec-outputs/${inputfile_name}/${rundefinition_name}/${benchmark_date}/</option>
 
       <option name="-skipRecursion"/>
       <option name="-setprop">limits.time.cpu=900s</option>
@@ -55,7 +55,7 @@
       <option name="-disable-java-assertions"/>
       <option name="-heap">10000m</option>
       <option name="-setprop">cpa.arg.errorPath.graphml=error-witness.graphml</option>
-      <option name="-outputpath">benchexec-outputs/${inputfile_name}/${rundefinition_name}/${benchmark_date}/</option>
+      <option name="-outputpath">../../benchexec-outputs/${inputfile_name}/${rundefinition_name}/${benchmark_date}/</option>
 
       <option name="-skipRecursion"/>
       <option name="-setprop">limits.time.cpu=900s</option>
