@@ -64,25 +64,56 @@ def main(args):
     expected_cpachecker_dir = 'cpachecker'
     expected_cpachecker_url = 'https://github.com/sosy-lab/cpachecker/'
     expected_cpachecker_commit = 'addf52135c4f7e83cb5431f828a968f1b85a81f6'
+
+    expected_benchexec_dir = 'benchexec'
+    expected_benchexec_url = 'https://github.com/sosy-lab/benchexec/'
+    expected_benchexec_commit = '2b478cf47dd7d2ac49494ea54d8990f4f29e4eb2'
     if args.setup_repos:
         setup_repo(
-            dir = expected_svcomp_dir,
-            url = expected_svcomp_url,
+            dir =    expected_svcomp_dir,
+            url =    expected_svcomp_url,
             commit = expected_svcomp_commit)
 
         setup_repo(
-            dir = expected_cpachecker_dir,
-            url = expected_cpachecker_url,
+            dir =    expected_cpachecker_dir,
+            url =    expected_cpachecker_url,
             commit = expected_cpachecker_commit)
+
+        setup_repo(
+            dir =    expected_benchexec_dir,
+            url =    expected_benchexec_url,
+            commit = expected_benchexec_commit)
+
     check_repo_status(
-        expected_dir=expected_cpachecker_dir,
-        expected_url=expected_cpachecker_url,
+        expected_dir=   expected_cpachecker_dir,
+        expected_url=   expected_cpachecker_url,
         expected_commit=expected_cpachecker_commit)
+
     check_repo_status(
-        expected_dir=expected_svcomp_dir,
-        expected_url=expected_svcomp_url,
+        expected_dir=   expected_svcomp_dir,
+        expected_url=   expected_svcomp_url,
         expected_commit=expected_svcomp_commit)
+
+    check_repo_status(
+        expected_dir=   expected_benchexec_dir,
+        expected_url=   expected_benchexec_url,
+        expected_commit=expected_benchexec_commit)
     print "Repos correct."
+
+    try:
+        subprocess.check_call(
+            'python3 -m benchexec.check_cgroups'.split(),
+            cwd=get_external_dir_path(expected_benchexec_dir)
+        )
+    except Exception as e:
+        print >> sys.stderr, ""
+        print >> sys.stderr, ""
+        print >> sys.stderr, "ERROR!"
+        print >> sys.stderr, "Failed to check cgroups setup for BenchExec."
+        print >> sys.stderr, "Visit https://github.com/sosy-lab/benchexec/blob/master/doc/INSTALL.md for detailed instructions."
+        raise e
+    print "BenchExec setup done correctly."
+    print "Ready to run benchmarks."
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
