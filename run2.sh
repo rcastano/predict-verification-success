@@ -1,3 +1,3 @@
 #!/bin/bash
 
-python setup.py --run_benchmarks
+python setup2.py --run_benchmarks
